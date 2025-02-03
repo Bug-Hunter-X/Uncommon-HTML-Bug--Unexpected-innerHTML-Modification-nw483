@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Correct approach to modify the content of the element
+    let existingContent = document.getElementById("myDiv").innerHTML;
+    let newContent = "<p>This is a paragraph.</p>";
+    document.getElementById("myDiv").innerHTML = newContent + existingContent; 
+  </script>
+</body>
+</html>
